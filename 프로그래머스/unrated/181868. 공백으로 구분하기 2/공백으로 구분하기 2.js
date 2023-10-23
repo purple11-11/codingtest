@@ -1,9 +1,10 @@
 const solution = (my_string) => {
-    let answer = [];
-    let str = my_string.trim().split(/\s+/);
-    for (let i = 0; i < str.length; i++) {
-        answer[i] = str[i];
+    let answer = []
+    let arr = my_string.split(" ");
+    for (let i = 0; i < arr.length; i++) {
+        if(arr[i] !== "") {
+            answer.push(arr[i]);
+        }
     }
-    return answer;
-   
+    return answer
 }
