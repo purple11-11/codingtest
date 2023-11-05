@@ -6,8 +6,8 @@ const solution = (num_list) => {
     let sum = num_list.reduce((acc, cur) => {
         return acc + cur;
     })
-    let dSum = sum * sum;
-    if(mul < dSum) {
+    
+    if(mul < (sum*sum)) {
         return 1;
     } else {
         return 0;
