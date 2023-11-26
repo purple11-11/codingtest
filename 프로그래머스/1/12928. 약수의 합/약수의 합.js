@@ -1,14 +1,8 @@
 function solution(n) {
-    let a = [];
+    let res = 0;
     for(let i = 1; i <= n; i++) {
         if(n%i === 0) {
-           a.push(i);
+           res += i;
         }
-    }
-    
-    let sum = a.reduce((acc, cur) => {
-        return acc + cur;
-    }, 0) 
-    
-    return sum;
+    } return res;
 }
