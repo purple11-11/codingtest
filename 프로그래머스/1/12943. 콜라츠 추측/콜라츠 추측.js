@@ -10,10 +10,5 @@ function solution(num) {
           loopCount++;
     }
     
-   if(num === 1) {  
-       return loopCount;
-    } else {
-        return -1;
-    }
-    
+   return num === 1 ? loopCount : -1;    
 }
