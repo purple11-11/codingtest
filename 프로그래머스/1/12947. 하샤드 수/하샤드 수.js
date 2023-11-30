@@ -5,6 +5,5 @@ function solution(x) {
      for(let i = 0; i < arr.length; i++) {
         sum += parseInt(arr[i]);
     } 
-    console.log(sum)
     return (x%sum === 0) ? true : false;
 }
