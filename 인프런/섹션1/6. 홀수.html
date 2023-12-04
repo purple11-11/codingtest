@@ -8,14 +8,15 @@
       function solution(arr) {
         let answer = [];
         let sum = 0;
-        let min = Number.MAX_SAFE_INTEGER;
-        for (let i = 0; i < arr.length; i++) {
-          if (arr[i] % 2 !== 0) {
-            sum += arr[i];
-            if (arr[i] < min) min = arr[i];
+        let min = [];
+        for (let i of arr) {
+          if (i % 2 !== 0) {
+            sum += i;
+            min.push(i);
           }
         }
-        answer = `${sum}\n${min}`;
+        min = min.sort();
+        answer = `${sum}\n${min[0]}`;
 
         return answer;
       }
