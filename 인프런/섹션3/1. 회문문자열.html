@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(s) {
+        let answer = "YES";
+        s = s.toLowerCase();
+        let j = s.length - 1;
+        for (let i = 0; i < s.length / 2; i++) {
+          if (s[i] === s[j]) j--;
+          else answer = "NO";
+        }
+        return answer;
+      }
+
+      let str = "gooG";
+      let str2 = "gOooG";
+      let str3 = "goofoG";
+      console.log(solution(str));
+      console.log(solution(str2));
+      console.log(solution(str3));
+    </script>
+  </body>
+</html>
