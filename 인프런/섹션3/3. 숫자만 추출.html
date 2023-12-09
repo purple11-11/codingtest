@@ -6,11 +6,20 @@
   <body>
     <script>
       function solution(str) {
-        let answer = [];
+        let answer = "";
         for (let i of str) {
-          if (0 <= i && i <= 9) answer.push(i);
+          if (!isNaN(i)) answer += i;
+          // isNaN() 메서드 활용
         }
-        return parseInt(answer.join(""));
+
+        return parseInt(answer);
+        // 내 풀이
+
+        // let answer = [];
+        // for (let i of str) {
+        //   if (0 <= i && i <= 9) answer.push(i);
+        // }
+        // return parseInt(answer.join(""));
       }
 
       let str = "g0en2T0s8eSoft";
