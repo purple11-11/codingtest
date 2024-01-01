@@ -1,6 +1,3 @@
 function solution(n) {
-    let trit = n.toString(3);
-    let reverseT = trit.split("").reverse().join("");
-    
-    return parseInt(reverseT, 3);
+  return parseInt(n.toString(3).split("").reverse().join(""), 3);
 }
