@@ -14,7 +14,6 @@ class Main {
         }
 
         // 중복 제거 후 문자 배열 생성
-        HashSet<String> set = new HashSet<>();
         char[] chars = T.toCharArray();
         Set<Character> charSet = new HashSet<>();
         for( char c : chars) charSet.add(c);
