@@ -4,10 +4,21 @@ class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        String str = sc.nextLine();
+        int[] arr = new int[8];
+        for(int i = 0; i < 8; i++) {
+            arr[i] = sc.nextInt();
+        }
+        sc.close();
         
-        if(str.equals("1 2 3 4 5 6 7 8")) System.out.println("ascending");
-        else if(str.equals("8 7 6 5 4 3 2 1")) System.out.println("descending");
-        else System.out.println("mixed");
+        String res ="";
+        for(int i = 0; i < arr.length-1; i++) {
+            if(arr[i]+1 == arr[i+1]) res="ascending";
+            else if (arr[i]-1 == arr[i+1]) res="descending";
+            else {
+                res = "mixed";
+                break;
+            }
+        }
+        System.out.println(res);
     }
 }
