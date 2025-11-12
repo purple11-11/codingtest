@@ -1,7 +1,3 @@
 function solution(box, n) {
-    let answer = 1;
-    for(i=0; i<3; i++) {
-     answer *= Math.floor(box[i]/n);
-    }
-    return answer
+  return box.reduce((acc,num)=>acc * parseInt(num/n), 1)
 }
