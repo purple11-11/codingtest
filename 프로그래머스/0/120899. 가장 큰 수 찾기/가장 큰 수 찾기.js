@@ -1,13 +1,4 @@
 function solution(array) {
-    let maxValue = array[0];
-    let maxIndex = 0;
-  
-    for(let i = 0; i < array.length; i++){
-        if(array[i] > maxValue) {
-            maxValue = array[i];
-            maxIndex = i;
-        }
-    }
-    
-    return [maxValue, maxIndex];
+    const maxValue = Math.max(...array)
+    return [maxValue,array.indexOf(maxValue)];
 }
